@@ -1,0 +1,29 @@
+Libraries and Functions Used
+
+This project utilizes various Python libraries for data processing, visualization, and machine learning. Below is a list of the libraries and their purposes:
+
+📚 Libraries
+
+🔹 Data Handling
+
+import sklearn.datasets as skds → For generating synthetic datasets
+
+🔹 Machine Learning
+
+from sklearn.linear_model import LogisticRegression → For logistic regression model
+
+from sklearn.model_selection import train_test_split → For splitting data into training and testing sets
+
+from sklearn.preprocessing import MinMaxScaler → For feature scaling
+
+from sklearn.metrics import classification_report → For evaluating the model's performance
+
+🔹 Visualization
+
+import matplotlib.pyplot as plt → For plotting
+
+import seaborn as sns → For advanced visualizations
+
+🔍 Functions Used
+
+No user-defined functions were found in the notebook.
