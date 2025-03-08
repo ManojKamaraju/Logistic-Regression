@@ -1,0 +1,70 @@
+# Logistic Regression Explained in Detail
+
+Logistic Regression is a supervised learning algorithm used for classification problems, where the goal is to predict discrete outcomes (e.g., spam or not spam, pass or fail, disease or no disease). Despite its name, Logistic Regression is actually a classification algorithm, not a regression model.
+
+## 1️⃣ How Logistic Regression Works?
+
+Logistic Regression predicts the probability that a given input belongs to a particular class. It does this using the logistic (sigmoid) function, which maps real-valued numbers to a probability range of 0 to 1.
+
+The sigmoid function is defined as:
+
+σ(z) = 1 / (1 + e^(-z))
+
+
+where `z` is a linear combination of input features and weights:
+
+z = w0 + w1*x1 + w2*x2 + ... + wn*xn
+
+
+The output of the sigmoid function represents the probability that a given instance belongs to the positive class.
+
+- If `P(y=1|x) > 0.5`, classify as **1 (positive class)**.
+- If `P(y=1|x) ≤ 0.5`, classify as **0 (negative class)**.
+
+## 2️⃣ Cost Function for Logistic Regression
+
+Instead of Mean Squared Error (used in Linear Regression), Logistic Regression uses the **Log Loss (Binary Cross-Entropy Loss):**
+
+J(w) = - (1/m) * Σ [ yi * log(hi) + (1 - yi) * log(1 - hi) ]
+
+
+where:
+- `yi` is the actual class (0 or 1)
+- `hi` is the predicted probability
+- `m` is the number of samples
+
+This function penalizes incorrect predictions more when they are confident but wrong.
+
+## 3️⃣ Optimization - Gradient Descent
+
+To minimize the cost function and find the best weights (`w`), **Gradient Descent** is used. The weight update formula is:
+
+w_j := w_j - α * (∂J(w) / ∂w_j)
+
+
+where:
+- `α` is the learning rate
+- `∂J(w) / ∂w_j` is the gradient of the loss function
+
+Gradient Descent iteratively updates the weights to reduce the cost function.
+
+## 4️⃣ Logistic Regression for Multi-Class Classification (One-vs-All)
+
+For multi-class classification, logistic regression is extended using the **One-vs-All (OvA) approach**, where multiple binary classifiers are trained—each distinguishing one class from the rest.
+
+## 5️⃣ Advantages of Logistic Regression
+
+✅ Simple and easy to implement  
+✅ Works well when classes are linearly separable  
+✅ Outputs probabilities, useful for decision-making  
+
+## 6️⃣ Disadvantages
+
+❌ Struggles with non-linear relationships  
+❌ Prone to overfitting with high-dimensional data  
+❌ Sensitive to imbalanced datasets  
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
